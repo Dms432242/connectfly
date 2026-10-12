@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Настройки профиля — Контур</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="workspace-selector">
+            <div class="avatar avatar-36" data-initials="СС"></div>
+            <div class="workspace-info">
+              <div class="workspace-name">Студия Север</div>
+              <div class="workspace-type">Рабочее пространство</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <div class="sidebar-search">
+          <button class="search-button" onclick="window.location.href='search.html'">
+            <span class="search-button-left">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              Поиск в пространстве
+            </span>
+            <span class="search-kbd">⌘K</span>
+          </button>
+        </div>
+
+        <nav class="sidebar-section">
+          <div class="sidebar-section-title">Рабочее пространство</div>
+          <a href="index.html" class="sidebar-item">
+            <span class="sidebar-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+            <span class="sidebar-item-text">Обзор</span>
+          </a>
+          <a href="channel.html" class="sidebar-item">
+            <span class="sidebar-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <span class="sidebar-item-text">Каналы</span>
+          </a>
+          <a href="dm.html" class="sidebar-item">
+            <span class="sidebar-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+            <span class="sidebar-item-text">Команда</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="profile-edit.html" class="user-mini">
+            <div class="avatar avatar-36" data-initials="АК"><span class="status status-online"></span></div>
+            <div class="user-mini-info">
+              <div class="user-mini-name">Анна Ковалева</div>
+              <div class="user-mini-status">Менеджер проектов</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="top-header">
+          <div class="flex items-center gap-3">
+            <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <div class="font-semibold">Настройки</div>
+          </div>
+          <div class="header-actions">
+            <button class="icon-btn" id="themeToggle" data-tooltip="Тема"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon-sun"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon-moon" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+          </div>
+        </div>
+
+        <div class="settings-layout">
+          <aside class="settings-sidebar">
+            <nav class="settings-nav">
+              <a href="#profile" class="settings-nav-item active">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Профиль
+              </a>
+              <a href="#notifications" class="settings-nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                Уведомления
+              </a>
+              <a href="#theme" class="settings-nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                Тема
+              </a>
+              <a href="#security" class="settings-nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Безопасность
+              </a>
+            </nav>
+          </aside>
+
+          <div class="settings-content">
+            <section class="settings-section" id="profile">
+              <h1 class="settings-title">Профиль</h1>
+
+              <div class="card" style="padding:24px; margin-bottom:24px">
+                <h2 style="font-size:16px; font-weight:600; margin:0 0 20px">Аватар</h2>
+                <div class="avatar-upload">
+                  <div class="avatar avatar-80" data-initials="АК"><span class="status status-online"></span></div>
+                  <div class="avatar-upload-actions">
+                    <div class="flex gap-2">
+                      <button class="btn btn-secondary btn-sm">Загрузить фото</button>
+                      <button class="btn btn-ghost btn-sm">Удалить</button>
+                    </div>
+                    <p class="text-sm text-muted">JPG, PNG или GIF. Рекомендуемый размер 400×400 px.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="padding:24px; margin-bottom:24px">
+                <h2 style="font-size:16px; font-weight:600; margin:0 0 20px">Личная информация</h2>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="firstName">Имя</label>
+                    <input type="text" id="firstName" class="input" value="Анна">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="lastName">Фамилия</label>
+                    <input type="text" id="lastName" class="input" value="Ковалева">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="displayName">Отображаемое имя</label>
+                  <input type="text" id="displayName" class="input" value="Анна Ковалева">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="role">Должность</label>
+                  <input type="text" id="role" class="input" value="Менеджер проектов">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="bio">О себе</label>
+                  <textarea id="bio" class="input" style="height:100px; resize:vertical; padding-top:10px">Координирую проекты команды Север. Всегда на связи в рабочее время.</textarea>
+                </div>
+              </div>
+
+              <div class="card" style="padding:24px; margin-bottom:24px">
+                <h2 style="font-size:16px; font-weight:600; margin:0 0 20px">Статус</h2>
+                <div class="status-options" id="statusOptions">
+                  <label class="status-option selected">
+                    <span class="status-option-radio"></span>
+                    <span class="flex items-center gap-2">
+                      <span class="status status-online" style="position:static"></span>
+                      <span class="status-option-label">В сети</span>
+                    </span>
+                    <span class="status-option-desc">Доступна для сообщений</span>
+                    <input type="radio" name="status" value="online" checked style="display:none">
+                  </label>
+                  <label class="status-option">
+                    <span class="status-option-radio"></span>
+                    <span class="flex items-center gap-2">
+                      <span class="status status-dnd" style="position:static"></span>
+                      <span class="status-option-label">Не беспокоить</span>
+                    </span>
+                    <span class="status-option-desc">Отключены уведомления</span>
+                    <input type="radio" name="status" value="dnd" style="display:none">
+                  </label>
+                  <label class="status-option">
+                    <span class="status-option-radio"></span>
+                    <span class="flex items-center gap-2">
+                      <span class="status status-away" style="position:static"></span>
+                      <span class="status-option-label">Отошла</span>
+                    </span>
+                    <span class="status-option-desc">Автоматически через 10 минут бездействия</span>
+                    <input type="radio" name="status" value="away" style="display:none">
+                  </label>
+                  <label class="status-option">
+                    <span class="status-option-radio"></span>
+                    <span class="flex items-center gap-2">
+                      <span class="status status-invisible" style="position:static"></span>
+                      <span class="status-option-label">Невидимка</span>
+                    </span>
+                    <span class="status-option-desc">Статус «не в сети» для других</span>
+                    <input type="radio" name="status" value="invisible" style="display:none">
+                  </label>
+                </div>
+              </div>
+
+              <div class="flex gap-3" style="justify-content:flex-end">
+                <button class="btn btn-secondary">Отмена</button>
+                <button class="btn btn-primary">Сохранить изменения</button>
+              </div>
+            </section>
+
+            <section class="settings-section" id="notifications" style="display:none">
+              <h1 class="settings-title">Уведомления</h1>
+              <div class="card" style="padding:24px">
+                <div style="display:flex; flex-direction:column; gap:18px">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <div class="font-medium">Push-уведомления</div>
+                      <div class="text-sm text-muted">Получать уведомления в браузере</div>
+                    </div>
+                    <label class="toggle">
+                      <input type="checkbox" checked>
+                      <span class="toggle-slider"></span>
+                    </label>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <div class="font-medium">Упоминания @</div>
+                      <div class="text-sm text-muted">Уведомлять, когда кто-то упоминает вас</div>
+                    </div>
+                    <label class="toggle">
+                      <input type="checkbox" checked>
+                      <span class="toggle-slider"></span>
+                    </label>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <div class="font-medium">Звуковые сигналы</div>
+                      <div class="text-sm text-muted">Воспроизводить звук при новом сообщении</div>
+                    </div>
+                    <label class="toggle">
+                      <input type="checkbox">
+                      <span class="toggle-slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="settings-section" id="theme" style="display:none">
+              <h1 class="settings-title">Тема</h1>
+              <div class="card" style="padding:24px">
+                <h2 style="font-size:16px; font-weight:600; margin:0 0 20px">Оформление интерфейса</h2>
+                <div class="theme-options" id="themeOptions">
+                  <div class="theme-card selected" data-theme-value="light">
+                    <div class="theme-preview theme-preview-light"></div>
+                    <div class="theme-card-title">Светлая</div>
+                    <div class="theme-card-desc">Классическое светлое оформление</div>
+                  </div>
+                  <div class="theme-card" data-theme-value="dark">
+                    <div class="theme-preview theme-preview-dark"></div>
+                    <div class="theme-card-title">Тёмная</div>
+                    <div class="theme-card-desc">Для работы вечером</div>
+                  </div>
+                  <div class="theme-card" data-theme-value="system">
+                    <div class="theme-preview theme-preview-system"></div>
+                    <div class="theme-card-title">Системная</div>
+                    <div class="theme-card-desc">Как в системе</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="settings-section" id="security" style="display:none">
+              <h1 class="settings-title">Безопасность</h1>
+              <div class="card" style="padding:24px; margin-bottom:24px">
+                <h2 style="font-size:16px; font-weight:600; margin:0 0 20px">Изменить пароль</h2>
+                <div class="form-group">
+                  <label class="form-label">Текущий пароль</label>
+                  <input type="password" class="input" placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Новый пароль</label>
+                  <input type="password" class="input" placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Повторите новый пароль</label>
+                  <input type="password" class="input" placeholder="••••••••">
+                </div>
+                <button class="btn btn-primary">Обновить пароль</button>
+              </div>
+              <div class="card" style="padding:24px">
+                <h2 style="font-size:16px; font-weight:600; margin:0 0 20px">Двухфакторная аутентификация</h2>
+                <p class="text-secondary" style="margin:0 0 16px">Защитите аккаунт дополнительным кодом из приложения-аутентификатора.</p>
+                <button class="btn btn-secondary">Настроить 2FA</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const sunIcon = themeToggle.querySelector('.theme-icon-sun');
+    const moonIcon = themeToggle.querySelector('.theme-icon-moon');
+
+    function updateThemeIcon() {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      sunIcon.style.display = isDark ? 'none' : 'block';
+      moonIcon.style.display = isDark ? 'block' : 'none';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('kontur-theme', next);
+      updateThemeIcon();
+      updateThemeCards(next);
+    });
+
+    const savedTheme = localStorage.getItem('kontur-theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon();
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('open');
+      sidebarOverlay.classList.toggle('open');
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleSidebar);
+    sidebarOverlay.addEventListener('click', toggleSidebar);
+
+    // Settings navigation
+    const navItems = document.querySelectorAll('.settings-nav-item');
+    const sections = document.querySelectorAll('.settings-section');
+
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = item.getAttribute('href').slice(1);
+        navItems.forEach(n => n.classList.remove('active'));
+        item.classList.add('active');
+        sections.forEach(s => s.style.display = s.id === target ? 'block' : 'none');
+      });
+    });
+
+    // Status options
+    document.querySelectorAll('.status-option').forEach(option => {
+      option.addEventListener('click', () => {
+        document.querySelectorAll('.status-option').forEach(o => o.classList.remove('selected'));
+        option.classList.add('selected');
+        option.querySelector('input').checked = true;
+      });
+    });
+
+    // Theme cards
+    function updateThemeCards(theme) {
+      document.querySelectorAll('.theme-card').forEach(card => {
+        card.classList.toggle('selected', card.dataset.themeValue === theme);
+      });
+    }
+
+    document.querySelectorAll('.theme-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const value = card.dataset.themeValue;
+        if (value === 'system') {
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          html.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+        } else {
+          html.setAttribute('data-theme', value);
+        }
+        localStorage.setItem('kontur-theme', value);
+        updateThemeIcon();
+        updateThemeCards(value);
+      });
+    });
+
+    updateThemeCards(savedTheme);
+  </script>
+</body>
+</html>

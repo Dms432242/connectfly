@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#general — Контур</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="workspace-selector">
+            <div class="avatar avatar-36" data-initials="СС"></div>
+            <div class="workspace-info">
+              <div class="workspace-name">Студия Север</div>
+              <div class="workspace-type">Рабочее пространство</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <div class="sidebar-search">
+          <button class="search-button" onclick="window.location.href='search.html'">
+            <span class="search-button-left">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              Поиск в пространстве
+            </span>
+            <span class="search-kbd">⌘K</span>
+          </button>
+        </div>
+
+        <nav class="sidebar-section">
+          <div class="sidebar-section-title">
+            <span>Каналы</span>
+            <button class="icon-btn btn-sm" data-tooltip="Создать канал" style="width:20px;height:20px;color:var(--text-muted)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          </div>
+          <a href="channel.html" class="sidebar-item active">
+            <span class="sidebar-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg></span>
+            <span class="sidebar-item-text">general</span>
+          </a>
+          <a href="channel.html" class="sidebar-item">
+            <span class="sidebar-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg></span>
+            <span class="sidebar-item-text">дизайн</span>
+          </a>
+          <a href="channel.html" class="sidebar-item">
+            <span class="sidebar-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg></span>
+            <span class="sidebar-item-text">разработка</span>
+          </a>
+        </nav>
+
+        <nav class="sidebar-section">
+          <div class="sidebar-section-title">
+            <span>Личные сообщения</span>
+            <button class="icon-btn btn-sm" data-tooltip="Новое сообщение" style="width:20px;height:20px;color:var(--text-muted)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          </div>
+          <a href="dm.html" class="sidebar-item">
+            <span class="sidebar-item-icon">
+              <div class="avatar avatar-28" data-initials="МС"><span class="status status-online"></span></div>
+            </span>
+            <span class="sidebar-item-text">Михаил Смирнов</span>
+          </a>
+          <a href="dm.html" class="sidebar-item">
+            <span class="sidebar-item-icon">
+              <div class="avatar avatar-28" data-initials="ЕП"><span class="status status-dnd"></span></div>
+            </span>
+            <span class="sidebar-item-text">Елена Попова</span>
+          </a>
+          <a href="dm.html" class="sidebar-item">
+            <span class="sidebar-item-icon">
+              <div class="avatar avatar-28" data-initials="ДВ"><span class="status status-away"></span></div>
+            </span>
+            <span class="sidebar-item-text">Денис Волков</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="profile-edit.html" class="user-mini">
+            <div class="avatar avatar-36" data-initials="АК"><span class="status status-online"></span></div>
+            <div class="user-mini-info">
+              <div class="user-mini-name">Анна Ковалева</div>
+              <div class="user-mini-status">Менеджер проектов</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="top-header">
+          <div class="flex items-center gap-3">
+            <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <div>
+              <div class="font-semibold"># general</div>
+              <div class="text-sm text-muted">128 участников</div>
+            </div>
+          </div>
+          <div class="header-actions">
+            <a href="search.html" class="icon-btn" data-tooltip="Поиск"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></a>
+            <a href="notifications.html" class="icon-btn" data-tooltip="Уведомления"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></a>
+            <button class="icon-btn" id="themeToggle" data-tooltip="Тема"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon-sun"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon-moon" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+          </div>
+        </div>
+
+        <div class="message-feed" id="messageFeed">
+          <div class="message-group">
+            <div class="message-avatar-col">
+              <div class="avatar avatar-36" data-initials="МС"><span class="status status-online"></span></div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-author">Михаил Смирнов</span>
+                <span class="message-time">09:42</span>
+              </div>
+              <div class="message-text">Всем привет! Выложил черновик API для личного кабинета. Посмотрите, пожалуйста, раздел <strong>/profile</strong>.</div>
+              <div class="message-reactions">
+                <button class="reaction active">👍 3</button>
+                <button class="reaction">👀 1</button>
+              </div>
+              <div class="thread-info">3 ответа в треде →</div>
+            </div>
+            <div class="message-actions">
+              <button class="icon-btn" data-tooltip="Ответить"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 17 4 12 9 7"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></svg></button>
+              <button class="icon-btn" data-tooltip="Добавить реакцию"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></button>
+              <button class="icon-btn" data-tooltip="Ещё"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
+            </div>
+          </div>
+
+          <div class="message-group" style="padding-left:48px">
+            <div class="message-content">
+              <div class="message-text">Там есть пример с <code>user.status</code> и <del>устаревшим полем</del> <code>legacy_id</code>.</div>
+            </div>
+            <div class="message-actions">
+              <button class="icon-btn" data-tooltip="Ответить"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 17 4 12 9 7"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></svg></button>
+              <button class="icon-btn" data-tooltip="Добавить реакцию"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></button>
+              <button class="icon-btn" data-tooltip="Ещё"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
+            </div>
+          </div>
+
+          <div class="message-group">
+            <div class="message-avatar-col">
+              <div class="avatar avatar-36" data-initials="ЕП"><span class="status status-dnd"></span></div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-author">Елена Попова</span>
+                <span class="message-time">10:15</span>
+              </div>
+              <div class="message-text">По макетам личного кабинета внёс правки: убрала лишние отступы и обновила статусы. Файлы в Figma.</div>
+              <div class="message-reactions">
+                <button class="reaction">🔥 2</button>
+              </div>
+            </div>
+            <div class="message-actions">
+              <button class="icon-btn" data-tooltip="Ответить"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 17 4 12 9 7"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></svg></button>
+              <button class="icon-btn" data-tooltip="Добавить реакцию"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></button>
+              <button class="icon-btn" data-tooltip="Ещё"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
+            </div>
+          </div>
+
+          <div class="message-group">
+            <div class="message-avatar-col">
+              <div class="avatar avatar-36" data-initials="ДВ"><span class="status status-away"></span></div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-author">Денис Волков</span>
+                <span class="message-time">10:38</span>
+              </div>
+              <div class="message-text"><strong>Обратите внимание:</strong> завтра в 11:00 созвон по дизайн-системе. Подготовьте вопросы заранее.</div>
+              <div class="message-reactions">
+                <button class="reaction">✅ 5</button>
+              </div>
+              <div class="thread-info">1 ответ в треде →</div>
+            </div>
+            <div class="message-actions">
+              <button class="icon-btn" data-tooltip="Ответить"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 17 4 12 9 7"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></svg></button>
+              <button class="icon-btn" data-tooltip="Добавить реакцию"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></button>
+              <button class="icon-btn" data-tooltip="Ещё"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="composer">
+          <div class="composer-toolbar">
+            <button class="icon-btn" data-tooltip="Жирный"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"/><path d="M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"/></svg></button>
+            <button class="icon-btn" data-tooltip="Код"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></button>
+            <button class="icon-btn" data-tooltip="Зачеркнуть"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.3 19c-1.4 1.4-3.3 2-5.3 2-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8"/><line x1="4" y1="12" x2="20" y2="12"/></svg></button>
+            <div style="width:1px;height:20px;background:var(--border-color);margin:0 4px"></div>
+            <button class="icon-btn" data-tooltip="Вложение"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg></button>
+            <button class="icon-btn" data-tooltip="Упомянуть"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg></button>
+            <button class="icon-btn" data-tooltip="Эмодзи"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></button>
+          </div>
+          <div class="composer-input-area">
+            <textarea class="composer-textarea" id="composerTextarea" placeholder="Напишите сообщение в #general..."></textarea>
+            <div class="mention-autocomplete" id="mentionAutocomplete" style="display:none">
+              <div class="mention-item active"><div class="avatar avatar-28" data-initials="АК"></div><div><div class="font-medium">Анна Ковалева</div><div class="text-sm text-muted">Вы</div></div></div>
+              <div class="mention-item"><div class="avatar avatar-28" data-initials="МС"></div><div><div class="font-medium">Михаил Смирнов</div><div class="text-sm text-muted">Разработчик</div></div></div>
+              <div class="mention-item"><div class="avatar avatar-28" data-initials="ЕП"></div><div><div class="font-medium">Елена Попова</div><div class="text-sm text-muted">Дизайнер</div></div></div>
+              <div class="mention-item"><div class="avatar avatar-28" data-initials="ДВ"></div><div><div class="font-medium">Денис Волков</div><div class="text-sm text-muted">Аналитик</div></div></div>
+            </div>
+          </div>
+          <div class="composer-footer">
+            <span class="composer-hint">Используйте <strong>@</strong> для упоминания и <strong>Shift+Enter</strong> для новой строки</span>
+            <button class="btn btn-primary btn-sm" id="sendBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Отправить
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const sunIcon = themeToggle.querySelector('.theme-icon-sun');
+    const moonIcon = themeToggle.querySelector('.theme-icon-moon');
+
+    function updateThemeIcon() {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      sunIcon.style.display = isDark ? 'none' : 'block';
+      moonIcon.style.display = isDark ? 'block' : 'none';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('kontur-theme', next);
+      updateThemeIcon();
+    });
+
+    const savedTheme = localStorage.getItem('kontur-theme');
+    if (savedTheme) html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon();
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('open');
+      sidebarOverlay.classList.toggle('open');
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleSidebar);
+    sidebarOverlay.addEventListener('click', toggleSidebar);
+
+    const textarea = document.getElementById('composerTextarea');
+    const autocomplete = document.getElementById('mentionAutocomplete');
+
+    textarea.addEventListener('input', () => {
+      const value = textarea.value;
+      const lastChar = value[value.length - 1];
+      const words = value.split(/\s+/);
+      const lastWord = words[words.length - 1];
+      autocomplete.style.display = lastWord.startsWith('@') && lastWord.length > 0 ? 'block' : 'none';
+    });
+
+    textarea.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        document.getElementById('sendBtn').click();
+      }
+    });
+
+    document.getElementById('sendBtn').addEventListener('click', () => {
+      if (!textarea.value.trim()) return;
+      textarea.value = '';
+      autocomplete.style.display = 'none';
+    });
+
+    const mentionItems = document.querySelectorAll('.mention-item');
+    mentionItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const words = textarea.value.split(/\s+/);
+        words.pop();
+        words.push('@' + item.querySelector('.font-medium').textContent.split(' ')[0]);
+        textarea.value = words.join(' ') + ' ';
+        autocomplete.style.display = 'none';
+        textarea.focus();
+      });
+    });
+  </script>
+</body>
+</html>

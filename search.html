@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск — Контур</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="workspace-selector">
+            <div class="avatar avatar-36" data-initials="СС"></div>
+            <div class="workspace-info">
+              <div class="workspace-name">Студия Север</div>
+              <div class="workspace-type">Рабочее пространство</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <div class="sidebar-search">
+          <button class="search-button" onclick="window.location.href='search.html'">
+            <span class="search-button-left">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              Поиск в пространстве
+            </span>
+            <span class="search-kbd">⌘K</span>
+          </button>
+        </div>
+
+        <nav class="sidebar-section">
+          <div class="sidebar-section-title">Рабочее пространство</div>
+          <a href="index.html" class="sidebar-item">
+            <span class="sidebar-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+            <span class="sidebar-item-text">Обзор</span>
+          </a>
+          <a href="channel.html" class="sidebar-item">
+            <span class="sidebar-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <span class="sidebar-item-text">Каналы</span>
+          </a>
+          <a href="dm.html" class="sidebar-item">
+            <span class="sidebar-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+            <span class="sidebar-item-text">Команда</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="profile-edit.html" class="user-mini">
+            <div class="avatar avatar-36" data-initials="АК"><span class="status status-online"></span></div>
+            <div class="user-mini-info">
+              <div class="user-mini-name">Анна Ковалева</div>
+              <div class="user-mini-status">Менеджер проектов</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="top-header">
+          <div class="flex items-center gap-3">
+            <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <div class="font-semibold">Поиск</div>
+          </div>
+          <div class="header-actions">
+            <a href="notifications.html" class="icon-btn" data-tooltip="Уведомления"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></a>
+            <button class="icon-btn" id="themeToggle" data-tooltip="Тема"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon-sun"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon-moon" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+          </div>
+        </div>
+
+        <div class="search-hero">
+          <div class="input-wrapper">
+            <span class="input-icon" style="left:14px">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </span>
+            <input type="text" class="input input-with-icon search-input-large" id="searchInput" placeholder="Поиск по сообщениям, файлам и людям..." value="макет">
+            <span class="input-suffix">
+              <span class="search-kbd" style="margin-right:4px">⌘K</span>
+            </span>
+          </div>
+          <div class="search-filters" id="searchFilters">
+            <button class="search-tab active" data-filter="all">Всё</button>
+            <button class="search-tab" data-filter="messages">Сообщения</button>
+            <button class="search-tab" data-filter="files">Файлы</button>
+            <button class="search-tab" data-filter="people">Люди</button>
+            <button class="search-tab" data-filter="channels">Каналы</button>
+          </div>
+        </div>
+
+        <div class="search-results" id="searchResults">
+          <div class="search-result" data-type="messages">
+            <div class="search-result-header">
+              <div class="avatar avatar-28" data-initials="ЕП"><span class="status status-dnd"></span></div>
+              <span class="search-result-title">Елена Попова</span>
+              <span class="search-result-meta">#дизайн · 12 окт в 14:32</span>
+            </div>
+            <div class="search-result-body">
+              Выложила финальные <mark>макет</mark>ы личного кабинета в Figma. Проверьте, пожалуйста, мобильную версию.
+            </div>
+          </div>
+
+          <div class="search-result" data-type="messages">
+            <div class="search-result-header">
+              <div class="avatar avatar-28" data-initials="ДВ"><span class="status status-away"></span></div>
+              <span class="search-result-title">Денис Волков</span>
+              <span class="search-result-meta">#general · 11 окт в 09:15</span>
+            </div>
+            <div class="search-result-body">
+              По <mark>макет</mark>ам нужно уточнить поведение фильтров. В текущем варианте не хватает состояния «пусто».
+            </div>
+          </div>
+
+          <div class="search-result" data-type="files">
+            <div class="search-result-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span class="search-result-title">makiety-lk-v3.fig</span>
+              <span class="search-result-meta">Файл · 10 окт</span>
+            </div>
+            <div class="search-result-body">
+              Макеты личного кабинета, версия 3. Содержит 24 экрана и UI Kit.
+            </div>
+          </div>
+
+          <div class="search-result" data-type="messages">
+            <div class="search-result-header">
+              <div class="avatar avatar-28" data-initials="МС"><span class="status status-online"></span></div>
+              <span class="search-result-title">Михаил Смирнов</span>
+              <span class="search-result-meta">Личные сообщения · 9 окт в 16:40</span>
+            </div>
+            <div class="search-result-body">
+              Обновил компоненты по последнему <mark>макет</mark>у. Всё лежит в ветке <code>feature/lk-layout</code>.
+            </div>
+          </div>
+
+          <div class="search-result" data-type="people">
+            <div class="search-result-header">
+              <div class="avatar avatar-36" data-initials="ММ"></div>
+              <span class="search-result-title">Мария Макетова</span>
+              <span class="search-result-meta">UX-дизайнер</span>
+            </div>
+            <div class="search-result-body">
+              Участник команды «Студия Север». Специализируется на прототипировании.
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const sunIcon = themeToggle.querySelector('.theme-icon-sun');
+    const moonIcon = themeToggle.querySelector('.theme-icon-moon');
+
+    function updateThemeIcon() {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      sunIcon.style.display = isDark ? 'none' : 'block';
+      moonIcon.style.display = isDark ? 'block' : 'none';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('kontur-theme', next);
+      updateThemeIcon();
+    });
+
+    const savedTheme = localStorage.getItem('kontur-theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon();
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('open');
+      sidebarOverlay.classList.toggle('open');
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleSidebar);
+    sidebarOverlay.addEventListener('click', toggleSidebar);
+
+    // Search filter tabs
+    const tabs = document.querySelectorAll('.search-tab');
+    const results = document.querySelectorAll('.search-result');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        results.forEach(result => {
+          result.style.display = filter === 'all' || result.dataset.type === filter ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Highlight search term
+    const searchInput = document.getElementById('searchInput');
+    function highlight() {
+      const term = searchInput.value.trim();
+      results.forEach(result => {
+        const body = result.querySelector('.search-result-body');
+        if (!term) return;
+        const text = body.textContent;
+        const regex = new RegExp(`(${term})`, 'gi');
+        body.innerHTML = text.replace(regex, '<mark>$1</mark>');
+      });
+    }
+
+    searchInput.addEventListener('input', highlight);
+    highlight();
+
+    // Keyboard shortcut Cmd+K
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+  </script>
+</body>
+</html>
