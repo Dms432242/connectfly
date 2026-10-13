@@ -1,0 +1,61 @@
+@import url('base.css');
+@import url('auth.css');
+
+.onboarding-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+}
+
+.onboarding-card {
+  width: 100%;
+  max-width: 560px;
+  padding: 40px;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.stepper-step { display: flex; align-items: center; gap: 8px; }
+
+.stepper-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--border-strong);
+}
+
+.stepper-dot.active { background-color: var(--accent); }
+
+.stepper-line {
+  width: 40px;
+  height: 2px;
+  background-color: var(--border-color);
+}
+
+.stepper-line.active { background-color: var(--accent); }
+
+.onboarding-title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.onboarding-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+@media (max-width: 480px) {
+  .onboarding-card { padding: 24px; }
+}

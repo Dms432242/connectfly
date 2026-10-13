@@ -1,0 +1,165 @@
+
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: var(--bg-secondary);
+}
+
+.auth-top-actions { position: absolute; top: 20px; right: 20px; }
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+}
+
+.auth-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.auth-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.form-group { margin-bottom: 16px; }
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.password-toggle {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.password-toggle:hover { color: var(--text-primary); background-color: var(--bg-hover); }
+
+.password-strength {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.password-strength-segment {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--border-color);
+  transition: background-color var(--transition-fast);
+}
+
+.password-strength-segment.weak { background-color: var(--danger); }
+.password-strength-segment.fair { background-color: var(--warning); }
+.password-strength-segment.good { background-color: #3b82f6; }
+.password-strength-segment.strong { background-color: var(--success); }
+
+/* Wizard */
+.wizard-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.wizard-step { display: flex; align-items: center; gap: 8px; }
+
+.wizard-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--border-strong);
+  transition: background-color var(--transition-fast);
+}
+
+.wizard-dot.active { background-color: var(--accent); }
+
+.wizard-line {
+  width: 40px;
+  height: 2px;
+  background-color: var(--border-color);
+  transition: background-color var(--transition-fast);
+}
+
+.wizard-line.active { background-color: var(--accent); }
+
+.step { display: none; }
+.step.active { display: block; }
+
+.wizard-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.wizard-actions .btn { flex: 1; }
+
+/* Choice cards */
+.choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.choice-card {
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: var(--bg-primary);
+}
+
+.choice-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.choice-card.selected { border-color: var(--accent); background-color: var(--accent-soft); }
+
+.choice-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background-color: var(--accent-soft);
+  color: var(--accent);
+}
+
+.choice-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+.choice-desc { font-size: 13px; color: var(--text-secondary); }
+
+@media (max-width: 480px) {
+  .choice-grid { grid-template-columns: 1fr; }
+}

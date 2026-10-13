@@ -4,11 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Вход — Контур</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .auth-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; background-color: var(--bg-secondary); }
-    .auth-top-actions { position: absolute; top: 20px; right: 20px; }
-  </style>
+  <link rel="stylesheet" href="css/login.css">
+  <script src="js/guard.js"></script>
 </head>
 <body>
   <div class="auth-page">
@@ -65,15 +62,12 @@
             <span class="toggle-slider"></span>
             <span class="text-sm text-secondary">Запомнить меня</span>
           </label>
-          <a href="#" class="text-sm">Забыли пароль?</a>
+          <a href="register.html" class="text-sm">Забыли пароль?</a>
         </div>
 
         <button type="submit" class="btn btn-primary" style="width:100%">Войти</button>
       </form>
 
-      <p style="text-align:center; margin-top:20px; color:var(--text-secondary); font-size:13px">
-        Ещё нет аккаунта? <a href="register.html">Зарегистрироваться</a>
-      </p>
     </div>
   </div>
 
@@ -122,7 +116,10 @@
       const email = emailInput.value.trim();
       const password = passwordInput.value.trim();
 
-      if (!email || !password || email !== 'demo@kontur.ru' || password !== 'password') {
+      const regData = JSON.parse(localStorage.getItem('kontur-registration-data') || '{}');
+      const isValid = email && password && email === regData.email && password === regData.password;
+
+      if (!isValid) {
         passwordInput.classList.add('input-error');
         emailInput.classList.add('input-error');
         errorText.style.display = 'block';
@@ -130,6 +127,7 @@
         passwordInput.classList.remove('input-error');
         emailInput.classList.remove('input-error');
         errorText.style.display = 'none';
+        localStorage.setItem('kontur-session-active', 'true');
         window.location.href = 'index.html';
       }
     });

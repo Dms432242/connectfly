@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Поиск — Контур</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/search.css">
+  <script src="js/guard.js"></script>
+  <script src="js/user-state.js"></script>
 </head>
 <body>
   <div class="page">
@@ -12,10 +14,10 @@
       <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
           <div class="workspace-selector">
-            <div class="avatar avatar-36" data-initials="СС"></div>
+            <div class="avatar avatar-36" data-initials="СС" data-field="workspaceInitials"></div>
             <div class="workspace-info">
-              <div class="workspace-name">Студия Север</div>
-              <div class="workspace-type">Рабочее пространство</div>
+              <div class="workspace-name" data-field="workspaceName">Студия ProjectE</div>
+              <div class="workspace-type" data-field="workspaceMode">Рабочее пространство</div>
             </div>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
@@ -49,9 +51,9 @@
 
         <div class="sidebar-footer">
           <a href="profile-edit.html" class="user-mini">
-            <div class="avatar avatar-36" data-initials="АК"><span class="status status-online"></span></div>
+            <div class="avatar avatar-36" data-initials="АК" data-field="userInitials"><span class="status status-online" data-field="userStatus"></span></div>
             <div class="user-mini-info">
-              <div class="user-mini-name">Анна Ковалева</div>
+              <div class="user-mini-name" data-field="userName">Анна Ковалева</div>
               <div class="user-mini-status">Менеджер проектов</div>
             </div>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted)"><polyline points="6 9 12 15 18 9"/></svg>
@@ -144,7 +146,7 @@
               <span class="search-result-meta">UX-дизайнер</span>
             </div>
             <div class="search-result-body">
-              Участник команды «Студия Север». Специализируется на прототипировании.
+              Участник команды «Студия ProjectE». Специализируется на прототипировании.
             </div>
           </div>
         </div>

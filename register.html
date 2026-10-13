@@ -4,11 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Регистрация — Контур</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .auth-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; background-color: var(--bg-secondary); }
-    .auth-top-actions { position: absolute; top: 20px; right: 20px; }
-  </style>
+  <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
   <div class="auth-page">
@@ -28,76 +24,143 @@
         КОНТУР
       </div>
 
-      <h1 class="auth-title">Создать аккаунт</h1>
-      <p class="auth-subtitle">Присоединяйтесь к команде за минуту</p>
+      <div class="wizard-progress" id="wizardProgress">
+        <div class="wizard-step"><div class="wizard-dot active" data-step="1"></div><div class="wizard-line"></div></div>
+        <div class="wizard-step"><div class="wizard-dot" data-step="2"></div><div class="wizard-line"></div></div>
+        <div class="wizard-step"><div class="wizard-dot" data-step="3"></div></div>
+      </div>
 
       <form id="registerForm" novalidate>
-        <div class="form-group">
-          <label class="form-label" for="name">Имя</label>
-          <div class="input-wrapper">
-            <span class="input-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </span>
-            <input type="text" id="name" class="input input-with-icon" placeholder="Иван Иванов" autocomplete="name">
-          </div>
-        </div>
+        <!-- Step 1 -->
+        <div class="step active" data-step="1">
+          <h1 class="auth-title">Расскажите о себе</h1>
+          <p class="auth-subtitle">Эти данные понадобятся для входа в аккаунт</p>
 
-        <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <div class="input-wrapper">
-            <span class="input-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </span>
-            <input type="email" id="email" class="input input-with-icon" placeholder="you@company.ru" autocomplete="email">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="password">Пароль</label>
-          <div class="input-wrapper">
-            <span class="input-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </span>
-            <input type="password" id="password" class="input input-with-icon" placeholder="Минимум 8 символов" autocomplete="new-password">
-            <div class="input-suffix">
-              <button type="button" class="password-toggle" id="togglePassword" aria-label="Показать пароль">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="eyeIcon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="eyeOffIcon" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
-              </button>
+          <div class="form-group">
+            <label class="form-label" for="name">Имя</label>
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <input type="text" id="name" class="input input-with-icon" placeholder="Иван Иванов" autocomplete="name">
             </div>
+            <div class="error-text" id="nameError" style="display:none">Укажите имя</div>
           </div>
-          <div class="password-strength" id="passwordStrength">
-            <div class="password-strength-segment"></div>
-            <div class="password-strength-segment"></div>
-            <div class="password-strength-segment"></div>
-            <div class="password-strength-segment"></div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <input type="email" id="email" class="input input-with-icon" placeholder="you@company.ru" autocomplete="email">
+            </div>
+            <div class="error-text" id="emailError" style="display:none">Введите корректный email</div>
           </div>
-          <div class="text-sm text-muted mt-2" id="strengthLabel">Введите пароль</div>
+
+          <div class="wizard-actions">
+            <button type="button" class="btn btn-primary" onclick="goToStep(2)">Продолжить</button>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="confirmPassword">Повторите пароль</label>
-          <div class="input-wrapper">
-            <span class="input-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </span>
-            <input type="password" id="confirmPassword" class="input input-with-icon" placeholder="••••••••" autocomplete="new-password">
+        <!-- Step 2 -->
+        <div class="step" data-step="2">
+          <h1 class="auth-title">Придумайте пароль</h1>
+          <p class="auth-subtitle">Минимум 8 символов, лучше добавить цифры и спецсимволы</p>
+
+          <div class="form-group">
+            <label class="form-label" for="password">Пароль</label>
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <input type="password" id="password" class="input input-with-icon" placeholder="Минимум 8 символов" autocomplete="new-password">
+              <div class="input-suffix">
+                <button type="button" class="password-toggle" id="togglePassword" aria-label="Показать пароль">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="eyeIcon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="eyeOffIcon" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="password-strength" id="passwordStrength">
+              <div class="password-strength-segment"></div>
+              <div class="password-strength-segment"></div>
+              <div class="password-strength-segment"></div>
+              <div class="password-strength-segment"></div>
+            </div>
+            <div class="text-sm text-muted mt-2" id="strengthLabel">Введите пароль</div>
+            <div class="error-text" id="passwordError" style="display:none">Пароль слишком короткий</div>
           </div>
-          <div class="error-text" id="matchError" style="display:none">Пароли не совпадают</div>
+
+          <div class="form-group">
+            <label class="form-label" for="confirmPassword">Повторите пароль</label>
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <input type="password" id="confirmPassword" class="input input-with-icon" placeholder="••••••••" autocomplete="new-password">
+            </div>
+            <div class="error-text" id="matchError" style="display:none">Пароли не совпадают</div>
+          </div>
+
+          <div class="wizard-actions">
+            <button type="button" class="btn btn-secondary" onclick="goToStep(1)">Назад</button>
+            <button type="button" class="btn btn-primary" onclick="goToStep(3)">Продолжить</button>
+          </div>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width:100%">Создать аккаунт</button>
+        <!-- Step 3 -->
+        <div class="step" data-step="3">
+          <h1 class="auth-title">Настройте рабочее пространство</h1>
+          <p class="auth-subtitle">Создайте новое или присоединитесь к существующему</p>
+
+          <div class="choice-grid" style="margin-bottom:20px">
+            <button type="button" class="choice-card" id="createChoice" onclick="selectWorkspaceMode('create')">
+              <div class="choice-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              </div>
+              <div class="choice-title">Создать</div>
+              <div class="choice-desc">Для своей команды</div>
+            </button>
+            <button type="button" class="choice-card" id="joinChoice" onclick="selectWorkspaceMode('join')">
+              <div class="choice-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10,17 15,12 10,7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+              </div>
+              <div class="choice-title">Вступить</div>
+              <div class="choice-desc">По приглашению</div>
+            </button>
+          </div>
+
+          <div class="form-group" id="createField" style="display:none">
+            <label class="form-label" for="workspaceName">Название воркспейса</label>
+            <input type="text" id="workspaceName" class="input" placeholder="Например, Студия ProjectE">
+            <div class="error-text" id="workspaceError" style="display:none">Укажите название</div>
+          </div>
+
+          <div class="form-group" id="joinField" style="display:none">
+            <label class="form-label" for="inviteCode">Код приглашения</label>
+            <input type="text" id="inviteCode" class="input" placeholder="xxxx-xxxx-xxxx">
+            <div class="error-text" id="inviteError" style="display:none">Укажите код приглашения</div>
+          </div>
+
+          <div class="wizard-actions">
+            <button type="button" class="btn btn-secondary" onclick="goToStep(2)">Назад</button>
+            <button type="button" class="btn btn-primary" onclick="completeRegistration()">Завершить регистрацию</button>
+          </div>
+        </div>
       </form>
 
-      <p style="text-align:center; margin-top:20px; color:var(--text-secondary); font-size:13px">
-        Уже есть аккаунт? <a href="login.html">Войти</a>
-      </p>
     </div>
   </div>
 
   <script>
-    const themeToggle = document.getElementById('themeToggle');
+    const TOTAL_STEPS = 3;
+    const STORAGE_KEY_DATA = 'kontur-registration-data';
+    const STORAGE_KEY_STEP = 'kontur-registration-step';
+    const STORAGE_KEY_COMPLETE = 'kontur-registration-complete';
+
     const html = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
     const sunIcon = themeToggle.querySelector('.theme-icon-sun');
     const moonIcon = themeToggle.querySelector('.theme-icon-moon');
 
@@ -119,30 +182,141 @@
     if (savedTheme) html.setAttribute('data-theme', savedTheme);
     updateThemeIcon();
 
-    const togglePassword = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('password');
-    const eyeIcon = document.getElementById('eyeIcon');
-    const eyeOffIcon = document.getElementById('eyeOffIcon');
+    // If already registered, redirect to dashboard
+    if (localStorage.getItem(STORAGE_KEY_COMPLETE) === 'true') {
+      window.location.replace('index.html');
+    }
 
-    togglePassword.addEventListener('click', () => {
+    let currentStep = parseInt(localStorage.getItem(STORAGE_KEY_STEP)) || 1;
+    const urlStep = parseInt(new URLSearchParams(window.location.search).get('step'));
+    if (urlStep && urlStep >= 1 && urlStep <= currentStep) {
+      currentStep = urlStep;
+    }
+
+    const formData = JSON.parse(localStorage.getItem(STORAGE_KEY_DATA) || '{}');
+
+    function saveData() {
+      formData.name = document.getElementById('name').value.trim();
+      formData.email = document.getElementById('email').value.trim();
+      formData.password = document.getElementById('password').value;
+      formData.workspaceMode = (document.querySelector('.choice-card.selected')?.id === 'createChoice') ? 'create' : 'join';
+      formData.workspaceName = document.getElementById('workspaceName').value.trim();
+      formData.inviteCode = document.getElementById('inviteCode').value.trim();
+      localStorage.setItem(STORAGE_KEY_DATA, JSON.stringify(formData));
+    }
+
+    function restoreData() {
+      if (formData.name) document.getElementById('name').value = formData.name;
+      if (formData.email) document.getElementById('email').value = formData.email;
+      if (formData.password) document.getElementById('password').value = formData.password;
+      if (formData.workspaceName) document.getElementById('workspaceName').value = formData.workspaceName;
+      if (formData.inviteCode) document.getElementById('inviteCode').value = formData.inviteCode;
+      if (formData.workspaceMode) selectWorkspaceMode(formData.workspaceMode);
+      updateStrength();
+    }
+
+    function showStep(step) {
+      if (step < 1 || step > TOTAL_STEPS) return;
+      currentStep = step;
+      localStorage.setItem(STORAGE_KEY_STEP, currentStep);
+      window.history.replaceState({}, '', 'register.html?step=' + currentStep);
+
+      document.querySelectorAll('.step').forEach(s => s.classList.toggle('active', parseInt(s.dataset.step) === currentStep));
+
+      document.querySelectorAll('.wizard-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i + 1 <= currentStep);
+      });
+      document.querySelectorAll('.wizard-line').forEach((line, i) => {
+        line.classList.toggle('active', i + 1 < currentStep);
+      });
+    }
+
+    function validateStep(step) {
+      let valid = true;
+
+      if (step === 1) {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        document.getElementById('nameError').style.display = name ? 'none' : 'block';
+        document.getElementById('emailError').style.display = emailValid ? 'none' : 'block';
+        if (!name || !emailValid) valid = false;
+      }
+
+      if (step === 2) {
+        const password = document.getElementById('password').value;
+        const confirm = document.getElementById('confirmPassword').value;
+
+        document.getElementById('passwordError').style.display = password.length >= 8 ? 'none' : 'block';
+        document.getElementById('matchError').style.display = password && password === confirm ? 'none' : 'block';
+        if (password.length < 8 || password !== confirm) valid = false;
+      }
+
+      if (step === 3) {
+        const mode = document.querySelector('.choice-card.selected')?.id;
+        if (mode === 'createChoice') {
+          const name = document.getElementById('workspaceName').value.trim();
+          document.getElementById('workspaceError').style.display = name ? 'none' : 'block';
+          if (!name) valid = false;
+        } else if (mode === 'joinChoice') {
+          const code = document.getElementById('inviteCode').value.trim();
+          document.getElementById('inviteError').style.display = code ? 'none' : 'block';
+          if (!code) valid = false;
+        } else {
+          valid = false;
+        }
+      }
+
+      return valid;
+    }
+
+    function goToStep(step) {
+      if (step > currentStep && !validateStep(currentStep)) return;
+      if (step < currentStep || validateStep(currentStep)) {
+        saveData();
+        showStep(step);
+      }
+    }
+
+    function selectWorkspaceMode(mode) {
+      document.getElementById('createChoice').classList.toggle('selected', mode === 'create');
+      document.getElementById('joinChoice').classList.toggle('selected', mode === 'join');
+      document.getElementById('createField').style.display = mode === 'create' ? 'block' : 'none';
+      document.getElementById('joinField').style.display = mode === 'join' ? 'block' : 'none';
+      saveData();
+    }
+
+    function completeRegistration() {
+      if (!validateStep(3)) return;
+      saveData();
+      localStorage.setItem(STORAGE_KEY_COMPLETE, 'true');
+      localStorage.setItem(STORAGE_KEY_STEP, '3');
+      localStorage.setItem('kontur-session-active', 'true');
+      window.location.replace('index.html');
+    }
+
+    // Password toggle
+    document.getElementById('togglePassword').addEventListener('click', () => {
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eyeIcon');
+      const eyeOffIcon = document.getElementById('eyeOffIcon');
       const isPassword = passwordInput.type === 'password';
       passwordInput.type = isPassword ? 'text' : 'password';
       eyeIcon.style.display = isPassword ? 'none' : 'block';
       eyeOffIcon.style.display = isPassword ? 'block' : 'none';
     });
 
-    const strengthSegments = document.querySelectorAll('.password-strength-segment');
-    const strengthLabel = document.getElementById('strengthLabel');
-
-    passwordInput.addEventListener('input', () => {
-      const value = passwordInput.value;
+    // Password strength
+    function updateStrength() {
+      const value = document.getElementById('password').value;
       let score = 0;
       if (value.length >= 8) score++;
       if (/[A-Z]/.test(value)) score++;
       if (/[0-9]/.test(value)) score++;
       if (/[^A-Za-z0-9]/.test(value)) score++;
 
-      strengthSegments.forEach((seg, i) => {
+      document.querySelectorAll('.password-strength-segment').forEach((seg, i) => {
         seg.className = 'password-strength-segment';
         if (i < score) {
           if (score === 1) seg.classList.add('weak');
@@ -153,25 +327,15 @@
       });
 
       const labels = ['Введите пароль', 'Слабый', 'Средний', 'Хороший', 'Надёжный'];
-      strengthLabel.textContent = labels[score];
-      strengthLabel.className = 'text-sm mt-2 ' + (score <= 1 ? 'text-danger' : 'text-secondary');
-    });
+      document.getElementById('strengthLabel').textContent = labels[score];
+      document.getElementById('strengthLabel').className = 'text-sm mt-2 ' + (score <= 1 ? 'text-danger' : 'text-secondary');
+    }
 
-    const registerForm = document.getElementById('registerForm');
-    const confirmInput = document.getElementById('confirmPassword');
-    const matchError = document.getElementById('matchError');
+    document.getElementById('password').addEventListener('input', updateStrength);
 
-    registerForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (passwordInput.value !== confirmInput.value) {
-        confirmInput.classList.add('input-error');
-        matchError.style.display = 'block';
-      } else {
-        confirmInput.classList.remove('input-error');
-        matchError.style.display = 'none';
-        window.location.href = 'index.html';
-      }
-    });
+    // Initialize
+    restoreData();
+    showStep(currentStep);
   </script>
 </body>
 </html>
